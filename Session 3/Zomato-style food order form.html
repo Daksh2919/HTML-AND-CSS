@@ -1,0 +1,60 @@
+<!-- Session 3 Que 4 and 5-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Order Form</title>
+</head>
+
+<body>
+		<fieldset>
+		
+			<h1 align="center">Zomato Food Order</h1>
+		
+		<form method="post">
+			<table align="center">
+				
+				<!-- Order id -->
+				<tr>
+					<td>Order Id:<br><br></td>
+					<td><input type="text" name="order" value="ORD12345" disabled><br><br></td>
+				</tr>
+				<!-- username -->
+				<tr>
+					<td>Username<br><br></td>
+					<td><input type="text" name="username" placeholder="Enter your username" required><br><br></td>
+				</tr>
+				
+				<!-- food item -->
+				<tr>
+					<td>Food Item:<br><br></td>
+					<td><select name="Food item">
+						<option value="Pizza">pizza</option>
+						<option value="Burger">Burger</option>
+						<option value="Biryani">Biryani</option>
+						<option value="pasta">pasta</option>
+					</select><br><br></td>
+				</tr>
+				
+				<!-- Quantity -->
+				<tr>
+					<td>Quantity<br><br></td>
+					<td><input type="number" name="quantity" min="1" required><br><br></td>
+				</tr>
+				
+				<!-- Delivery Instruction -->
+				<tr>
+					<td>Delivery Instruction:<br><br></td>
+					<td><textarea name="instruction" rows="5" col="50" placeholder="Enter delivery instruction"></textarea><br><br></td>
+				</tr>
+				
+				<!-- submit -->
+				<tr>
+					<td><input type="submit" value="place order"></td>
+				</tr>
+			</table>
+		</form>
+		</fieldset>
+</body>
+</html>

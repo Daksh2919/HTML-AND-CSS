@@ -1,0 +1,43 @@
+<!-- Session 3 Que 1 To 3 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Review Form</title>
+</head>
+<body>
+	<fieldset>
+	<legend align="center" style="font-size:20px"><h1>Flipkart Product Review</h1></legend>
+	
+	<form method="post" action="">
+	
+		
+		<!-- username-->		
+		<label for="username">Username:</label>
+		<input type="text" placeholder="Enter your username" name="username" required size="30">
+		<br><br>
+		
+		<!-- Rating -->
+		<label for="rating">Rating:</label>
+		<select name="rating" required>
+			<option value=""disabled selected>Select Rating</option>
+			<option value="1">1 - ★</option>
+			<option value="2">2 - ★★</option>
+			<option value="3">3 - ★★★</option>
+			<option value="4">4 - ★★★★</option>
+			<option value="5">5 - ★★★★★</option>
+		</select>
+		<br><br>
+		
+		<!-- Review -->
+		<label for="review">Your Review:</label>
+		<textarea name="comment" rows="5" col="50" minlength="20" placeholder="Enter your Review" required></textarea>
+		<br><br>
+		
+		<!-- Submit Button -->
+		<input type="submit" value="Submit Review">
+		
+		
+	</form>
+	
+</body>
+</html>

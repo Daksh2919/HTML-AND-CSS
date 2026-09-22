@@ -1,0 +1,108 @@
+<!-- Session 8 Que 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Product Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #ccc;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 20px;
+            color: #212121;
+            margin: 15px 0;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #388e3c;
+        }
+
+        .rating {
+            display: inline-block;
+            background-color: #388e3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .buy-button {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #fb641b;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 500px) {
+            .product-card {
+                width: 90%;
+                box-sizing: border-box;
+            }
+
+            .product-card img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-card">
+
+        <img src="samsung.jpg" alt="Samsung Galaxy Smartphone">
+
+        <h2 class="product-title">
+            Samsung Galaxy Smartphone
+        </h2>
+
+        <p>8GB RAM | 128GB Storage | 50MP Camera</p>
+
+        <span class="rating">⭐ 4.5</span>
+
+        <p class="price">₹1,80,999</p>
+
+        <button class="buy-button">
+            Buy Now
+        </button>
+
+    </div>
+
+</body>
+</html>

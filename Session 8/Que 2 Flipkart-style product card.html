@@ -1,0 +1,127 @@
+<!-- Session 8 Que 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Product Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* Horizontal layout */
+        .product-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .product-image {
+            width: 300px;
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 24px;
+            color: #212121;
+        }
+
+        .price {
+            font-size: 26px;
+            font-weight: bold;
+            color: #388e3c;
+        }
+
+        .rating {
+            background-color: #388e3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .buy-button {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #fb641b;
+        }
+
+        /* Vertical layout for screens 600px or less */
+        @media (max-width: 600px) {
+            .product-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-image {
+                width: 100%;
+                height: auto;
+                max-width: 300px;
+            }
+
+            .product-details {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-card">
+
+        <!-- Product image -->
+        <img
+            class="product-image"
+            src="samsung.jpg"
+            alt="Samsung Galaxy Smartphone"
+        >
+
+        <!-- Product details -->
+        <div class="product-details">
+            <h2 class="product-title">
+                Samsung Galaxy Smartphone
+            </h2>
+
+            <p>8GB RAM | 128GB Storage | 50MP Camera</p>
+
+            <p>
+                <span class="rating">⭐ 4.5</span>
+            </p>
+
+            <p class="price">₹1,80,999</p>
+
+            <button class="buy-button">
+                Buy Now
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>

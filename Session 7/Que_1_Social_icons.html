@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 - Social Icons (Flexbox)</title>
+
+  <style>
+    /* Reset default browser spacing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* ===== THE FLEXBOX CONTAINER ===== */
+    .icon-container {
+      display: flex;                    /* turns on Flexbox: children sit in a ROW */
+      justify-content: space-around;    /* equal spacing between/around the icons */
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto;                   /* centers the container on the page */
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Each icon image */
+    .icon-container img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;               /* makes the image round */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Favorite Apps</h1>
+
+  <!--
+    NOTE: These images are built-in (inline SVG), so no internet is needed.
+    To use your own logos, save the images in the same folder and change
+    src to e.g. src="instagram.png"
+  -->
+  <div class="icon-container">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23E1306C'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-size='14' font-family='Arial' font-weight='bold' text-anchor='middle' dy='.35em'%3EInsta%3C/text%3E%3C/svg%3E"   alt="Instagram">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%2325D366'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-size='14' font-family='Arial' font-weight='bold' text-anchor='middle' dy='.35em'%3EWhatsApp%3C/text%3E%3C/svg%3E" alt="WhatsApp">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23CB202D'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-size='14' font-family='Arial' font-weight='bold' text-anchor='middle' dy='.35em'%3EZomato%3C/text%3E%3C/svg%3E"  alt="Zomato">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' fill='%231DB954'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-size='14' font-family='Arial' font-weight='bold' text-anchor='middle' dy='.35em'%3ESpotify%3C/text%3E%3C/svg%3E" alt="Spotify">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 - Playlist Bar (Flexbox)</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;              /* Spotify-like dark background */
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* ===== OUTER FLEX CONTAINER: the horizontal bar ===== */
+    .playlist-bar {
+      display: flex;                    /* cards sit side by side in a row */
+      gap: 15px;                        /* space between cards */
+      overflow-x: auto;                 /* scroll sideways if screen is small */
+      padding-bottom: 10px;
+    }
+
+    /* ===== EACH SONG CARD (also a flex container) ===== */
+    .song-card {
+      display: flex;                    /* cover box + text sit in a row */
+      align-items: center;              /* VERTICALLY centers the content */
+      gap: 12px;
+      min-width: 220px;                 /* keeps cards from shrinking too much */
+      height: 90px;                     /* fixed height so centering is visible */
+      padding: 10px 15px;
+      background: #282828;
+      border-radius: 8px;
+    }
+
+    /* Small square "album cover" */
+    .cover {
+      width: 55px;
+      height: 55px;
+      background: #1DB954;              /* Spotify green */
+      border-radius: 6px;
+      display: flex;                    /* Flexbox again, just to center the emoji */
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .song-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .artist {
+      font-size: 13px;
+      color: #b3b3b3;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Playlist</h1>
+
+  <div class="playlist-bar">
+
+    <div class="song-card">
+      <div class="cover">🎵</div>
+      <div>
+        <div class="song-name">Kesariya</div>
+        <div class="artist">Arijit Singh</div>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="cover">🎵</div>
+      <div>
+        <div class="song-name">Apna Bana Le</div>
+        <div class="artist">Arijit Singh</div>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="cover">🎵</div>
+      <div>
+        <div class="song-name">Chaleya</div>
+        <div class="artist">Arijit Singh</div>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="cover">🎵</div>
+      <div>
+        <div class="song-name">Tum Hi Ho</div>
+        <div class="artist">Arijit Singh</div>
+      </div>
+    </div>
+
+    <div class="song-card">
+      <div class="cover">🎵</div>
+      <div>
+        <div class="song-name">Kahani Suno</div>
+        <div class="artist">Kaifi Khalil</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

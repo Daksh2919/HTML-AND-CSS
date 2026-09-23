@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 5 - Refactored CSS (Zomato Card)</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+/* =====================================================
+   BEFORE (Task 1):
+   margin: 10px; and padding: 10px; were written again
+   and again in .card, .res-name, .res-cuisine and
+   .res-rating (4 times each).
+
+   AFTER (this file):
+   They are written ONLY ONCE in the reusable class .space
+   and we add class="space" in the HTML where needed.
+
+   HOW THIS IMPROVES MAINTAINABILITY:
+   If we want to change the spacing (for example 10px to
+   20px), we edit just ONE line instead of searching and
+   changing many places. This saves time, avoids mistakes,
+   keeps the spacing the same everywhere, and makes the
+   CSS shorter and easier to read.
+   ===================================================== */
+
+/* Reusable class */
+.space {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* The card only keeps what is special about it */
+.card {
+    width: 250px;
+    background-color: white;
+    border: 2px solid #e23744;
+}
+
+/* Common border for the sections */
+.box {
+    border: 1px solid gray;
+}
+
+.res-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.res-cuisine {
+    color: #555555;
+}
+
+.res-rating {
+    background-color: #267e3e;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Every element uses the class "space" for margin and padding -->
+<div class="card space">
+    <p class="box space res-name">Spice Garden</p>
+    <p class="box space res-cuisine">North Indian, Chinese</p>
+    <p class="box space res-rating">Rating: 4.5 / 5</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 2 - Flipkart Product Tile</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+/* The tile box. inline-block puts tiles side by side */
+.tile {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    background-color:pink;
+    border: 1px solid ;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Image: block = image takes its own full line */
+.tile-img {
+    display: block;
+    width: 150px;
+    height: 100px;
+}
+
+/* Product name: block = name takes the full line */
+.tile-name {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Price: inline-block = small box, padding and margin work properly */
+.tile-price {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ffe500;
+    font-weight: bold;
+}
+
+/* display: none = hides the element completely.
+   This is written AFTER .tile-price so that it wins. */
+.hide {
+    display: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Tile 1: price is visible -->
+<div class="tile">
+    <img class="tile-img" alt="Shoes" src="sh.png" width='150' height='100'><rect width='150' height='100' fill='orange'/></svg>
+    <span class="tile-name">Running Shoes</span>
+    <span class="tile-price">Rs. 1499</span>
+</div>
+
+<!-- Tile 2: class "hide" is added, so the price is hidden.
+     TRY THIS: remove the word hide from the price line below and refresh. -->
+<div class="tile">
+    <img class="tile-img" alt="Shoes" src="mh.png" width='150' height='100'><rect width='150' height='100' fill='lightblue'/></svg>
+    <span class="tile-name">Casual Shoes</span>
+    <span class="tile-price hide">Rs. 999</span>
+</div>
+
+<!-- To use your own image, replace the src with your file name, for example src="shoes.jpg" -->
+
+</body>
+</html>

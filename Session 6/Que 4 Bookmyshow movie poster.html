@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 4 - BookMyShow Poster Grid</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+/* The grid: 4 posters in one row */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 15px;
+}
+
+/* Each poster is the relative parent of the badge */
+.poster {
+    position: relative;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.poster p {
+    margin: 0;
+    padding-top: 90px;           /* pushes the movie name to the middle */
+}
+
+/* Different colours so each poster looks different */
+.p1 { background-color: #c0392b; }
+.p2 { background-color: #2980b9; }
+.p3 { background-color: #8e44ad; }
+.p4 { background-color: #16a085; }
+
+/* The 'New' badge, placed inside the relative poster */
+.badge {
+    position: absolute;
+    top: 0;                      /* touches the top edge of the poster */
+    left: 0;                     /* touches the left edge of the poster */
+    background-color: #f8b400;
+    color: black;
+    font-weight: bold;
+    padding: 4px 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+
+    <!-- Only the first poster has the New badge -->
+    <div class="poster p1">
+        <span class="badge">New</span>
+        <p>Movie 1</p>
+    </div>
+
+    <div class="poster p2">
+        <p>Movie 2</p>
+    </div>
+
+    <div class="poster p3">
+        <p>Movie 3</p>
+    </div>
+
+    <div class="poster p4">
+        <p>Movie 4</p>
+    </div>
+
+</div>
+
+</body>
+</html>
